@@ -12,4 +12,5 @@ Pro ASP.NET 3 SportStore Tutorial
     dotnet sln GusStoreSln add GusStoreSln/OutdoorProducts.Tests 
     dotnet add GusStoreSln/OutdoorProducts.Tests reference GusStoreSln/OutdoorProducts 
 
-##
+## Screenshot #1
+![LAB 1B - SportsStore-A Real Application (in-class)](https://user-images.githubusercontent.com/20195657/92675375-148d1400-f2d4-11ea-9e5c-6d8ea4e3f430.PNG)
