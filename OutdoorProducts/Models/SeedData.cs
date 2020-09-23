@@ -18,7 +18,7 @@ namespace OutdoorProducts.Models
             {
                 context.Database.Migrate();
             }
-            
+
             if (!context.Products.Any())
             {
                 context.Products.AddRange(
