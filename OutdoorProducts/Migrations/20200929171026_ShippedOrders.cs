@@ -2,7 +2,7 @@
 
 namespace OutdoorProducts.Migrations
 {
-    public partial class Initial : Migration
+    public partial class ShippedOrders : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -20,7 +20,8 @@ namespace OutdoorProducts.Migrations
                     State = table.Column<string>(nullable: false),
                     Zip = table.Column<string>(nullable: true),
                     Country = table.Column<string>(nullable: false),
-                    GiftWrap = table.Column<bool>(nullable: false)
+                    GiftWrap = table.Column<bool>(nullable: false),
+                    Shipped = table.Column<bool>(nullable: false)
                 },
                 constraints: table =>
                 {

@@ -10,7 +10,7 @@ using OutdoorProducts.Models;
 namespace OutdoorProducts.Migrations
 {
     [DbContext(typeof(StoreDbContext))]
-    [Migration("20200923224923_Initial")]
+    [Migration("20200929171657_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -77,6 +77,9 @@ namespace OutdoorProducts.Migrations
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("Shipped")
+                        .HasColumnType("bit");
 
                     b.Property<string>("State")
                         .IsRequired()

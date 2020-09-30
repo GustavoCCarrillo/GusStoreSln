@@ -37,6 +37,7 @@ namespace OutdoorProducts
             services.AddSession();
             services.AddScoped<Cart>(sp => SessionCart.GetCart(sp));
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+            services.AddServerSideBlazor();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -66,6 +67,8 @@ namespace OutdoorProducts
              new { Controller = "Home", action = "Index", productPage = 1 });
             endpoints.MapDefaultControllerRoute();
             endpoints.MapRazorPages();
+                endpoints.MapBlazorHub();
+                endpoints.MapFallbackToPage("/admin/{cathall}", "/Admin/Index");
             });
             SeedData.EnsurePopulated(app);
         }

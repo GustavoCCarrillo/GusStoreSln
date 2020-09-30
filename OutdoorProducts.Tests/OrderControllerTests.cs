@@ -46,7 +46,7 @@ namespace OutdoorProducts.Tests
             target.ModelState.AddModelError("error", "error");
 
             //act - try to checkout 
-            ViewResult result = target.Checkout(new Order) as ViewResult;
+            ViewResult result = target.Checkout(new Order()) as ViewResult;
 
             //assert - check that the order hasn't been passed stored
             mock.Verify(m => m.SaveOrder(It.IsAny<Order>()), Times.Never);
